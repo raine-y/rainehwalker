@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Tess Walker</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="anime-3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+    <div id="nav-container">
+        <div id="nav">
+            <a href="index.html">Tess Walker</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    <div id="slider-container">
+        <div class="slider">
+            <div id="slide-1-container">
+                <img id="left-image" src="images/layered-steps-haikei.svg">
+                <img id="right-image" src="images/layered-steps-haikei(1).svg"
+                <div id="slide-1">
+                    <div id="popup-container">
+                        <div id="popup-header">
+                            <p><i>tesswalker - Console</i></p>
+                            <div id="resize">
+                                <div id="resize-box"></div>
+                                <div id="resize-box"></div>
+                                <div id="resize-box"></div>
+                            </div>
+                        </div>
+                        <div id="intro-container">
+                            <h1 id="carrot">
+                                >&nbsp;  
+                            </h1>
+                            <h1 id="intro-line-1">
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="silder">
+            <div id="slide-2-container">
+                <div id="slide-2">
+
+                </div>
+            </div>
+        </div>
+        <div class="silder">
+            <div id="slide-3-container">
+                <div id="slide-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const textEl = document.getElementById('intro-line-1');
+        const text = "Hey, I'm Tess :3";
+        let delay = 105; 
+        let duration = 2000; 
+        
+        function animateType() {
+          anime({
+            targets: textEl,
+            opacity: 1,
+            easing: 'linear',
+            duration: 500
+          });
+        
+          anime({
+            targets: textEl,
+            innerHTML: [0, text.length],
+            easing: 'linear',
+            round: 1,
+            delay: 500,
+            duration: duration,
+            update: function () {
+              textEl.innerHTML = text.substring(0, Math.round(textEl.innerHTML));
+            },
+          });
+        }
+        
+        setTimeout(animateType, delay);
+        
+    </script>
+
+</body>
+</html>

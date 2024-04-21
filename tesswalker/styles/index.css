@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323/VT323-Regular.ttf');
+  }
+  
+@font-face {
+    font-family: 'Martian_Mono';
+    src: url('../fonts/Martian_Mono/static/MartianMono-Regular.ttf');
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV */
+
+#nav-container {
+    position: absolute;
+    z-index: 20;
+    top: 4rem;
+    right: 8rem;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nav > a:link {
+    text-decoration: none;
+}
+
+#nav> a:visited {
+    color: black;
+}
+
+#nav> a:hover {
+    color: black;
+}
+
+#nav> a:active {
+    color: black;
+}
+
+/* SLIDER */
+
+#slider-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.slider {
+    height: 100%;
+    width: 100%;
+}
+
+/* SLIDE ONE */
+
+#slide-1-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #b99dff;
+    z-index: 10;
+}
+
+#left-image {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    left: 0;
+}
+
+#right-image {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    right: 0;
+}
+
+#slide-1 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+#intro-container {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+}
+
+#intro-container > h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
+#intro-line-1, #carrot {
+    font-family: 'VT323';
+    font-size: 4.8rem;
+    color: #F5F5F5;
+}
+
+/* POPUP */
+
+#popup-container {
+    display: flex;
+    flex-direction: column;
+    border: 6px solid #ECB9B8;
+    position: absolute;
+    top: 32%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 635px;
+    background-color: #3C3C3C;
+}
+
+#popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;   
+    height: 32px;
+    width: 100%;
+    background-color: #ECB9B8;
+    color: #b4879c;
+    padding-bottom: 3px;
+}
+
+#resize {
+    display: flex;
+    flex-direction: row;
+}
+
+#resize-box {
+    height: 20px;
+    width: 20px;
+    background-color: #f8d9d8;
+    border: 1.5px solid #b4879c;
+    margin-left: 6px;
+}
