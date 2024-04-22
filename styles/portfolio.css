@@ -62,7 +62,7 @@ body, html {
   }
 
   #portfolio {
-    border-top: 5px solid #C17EFF; 
+    border-top: 5px solid #ECB9B8; 
   }
 
   #tess:before, #portfolio:before, #about:before {
@@ -73,7 +73,7 @@ body, html {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: #C17EFF;
+    background: #ECB9B8;
     opacity: .65;
     transform: scaleY(0);    transform-origin: 0 0;
     transition: transform 0.2s ease-out;
@@ -84,7 +84,7 @@ body, html {
   }
 
   #tess:hover, #portfolio:hover, #about:hover {
-    border-top: 5px solid #C17EFF;
+    border-top: 5px solid #ECB9B8;
   }
 
   /* SOCIALS */
@@ -139,7 +139,7 @@ body, html {
 #popup-container {
   display: flex;
   flex-direction: column;
-  border: 6px solid #C17EFF;
+  border: 6px solid #ECB9B8;
   position: relative;
   z-index: 15;
   margin-top: 4rem;
@@ -155,8 +155,8 @@ body, html {
   align-items: center;   
   height: 32px;
   width: 100%;
-  background-color: #C17EFF;
-  color: #eee0f5;
+  background-color: #ECB9B8;
+  color: #F5E0E0;
   padding-bottom: 3px;
   font-family: 'Martian_Mono';
   font-size: .85rem;
@@ -170,7 +170,7 @@ body, html {
 #resize-box {
   height: 20px;
   width: 20px;
-  background-color: #eee0f5;
+  background-color: #F5E0E0;
   margin-left: 6px;
 }
 

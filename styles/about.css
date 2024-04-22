@@ -57,7 +57,7 @@ body, html {
   }
 
   #about {
-    border-top: 5px solid #D664FF;
+    border-top: 5px solid #ECB9B8;
   }
 
   #tess:before, #portfolio:before, #about:before {
@@ -68,7 +68,7 @@ body, html {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: #D664FF;
+    background: #ECB9B8;
     opacity: .65;
     transform: scaleY(0);    transform-origin: 0 0;
     transition: transform 0.2s ease-out;
@@ -79,7 +79,7 @@ body, html {
   }
 
   #tess:hover, #portfolio:hover, #about:hover {
-    border-top: 5px solid #D664FF;
+    border-top: 5px solid #ECB9B8;
   }
 
   /* SOCIALS */
