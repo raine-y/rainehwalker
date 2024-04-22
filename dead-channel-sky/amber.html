@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber</title>
+    <link rel="stylesheet" href="amber.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+
+    <script>
+
+        function randomString(Length) {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
+            for( var i=0; i < Length; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function ChangingRandomString(Length) {
+            setInterval(function(){
+                var elements = document.getElementsByClassName('random');
+                for(var i=0; i<elements.length; i++) { 
+                    elements[i].innerHTML = randomString(Length);
+                }
+            },25);
+        }
+
+        function fadeInAmber() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+            wait(750).then(() => document.getElementById('amber-container').className = 'fadeIn');
+            wait(1625).then(() => document.getElementById('popup-container').className = 'fadeIn');
+        }
+
+        function holdOn() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+            document.getElementById('popup-content-text').innerHTML = 'Actually, hold that thought..';
+
+            document.getElementById('skyButton').style.display = 'none';
+            document.getElementById('whereButton').style.display = 'none';
+
+            document.getElementById('intermission1').style.display = 'inline-block';
+            document.getElementById('intermission2').style.display = 'inline-block';
+
+            wait(400).then(() => document.getElementById('popup-container').className = 'fadeOut');
+            wait(1200).then(() => document.getElementById('console-container').className = 'fadeIn');
+            wait(1200).then(() => document.getElementById('console-container').style.display = 'flex');
+
+            wait(2300).then(() => document.getElementById('intro1').style.display = 'inline-block');
+            wait(3125).then(() => document.getElementById('intro2').style.display = 'inline-block');
+            document.getElementById('intro3').style.display = 'inline-block';
+
+            wait(3830).then(() => document.getElementById('your-reply').style.display = 'flex');
+
+
+        }
+
+        /* I AM SO SORRY - I KNOW I CANNOT REPENT */
+
+        /*
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+        */
+
+        function theSky() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('sky-one-one').style.display = 'inline-block';
+            document.getElementById('sky-one-two').style.display = 'inline-block';
+            document.getElementById('sky-one-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = 'C:/inside/Amber> Dude what, are you high?');
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = 'C:/inside/Amber> The sky looks the same as always.');
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = 'C:/inside/Amber> Maybe you should be getting more sleep.');
+        }
+
+        function youreKidding() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('sky-two-one').style.display = 'inline-block';
+            document.getElementById('sky-two-two').style.display = 'inline-block';
+            document.getElementById('sky-two-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> I don't know what you're talking about.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = 'C:/inside/Amber> ...');
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = 'C:/inside/Amber> Look, just drop it, okay?');
+        }
+
+        function wth() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('sky-three-one').style.display = 'inline-block';
+            document.getElementById('sky-three-two').style.display = 'inline-block';
+            document.getElementById('sky-three-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> Shit, I don't fucking know.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> This is just how it is now, okay.");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> ... Another reason I shouldn't have come back.");
+        }
+
+        function whereWereYou() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('where-one-one').style.display = 'inline-block';
+            document.getElementById('where-one-two').style.display = 'inline-block';
+            document.getElementById('where-one-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> I went back north to see family.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> Yeah, just felt like it was time for a visit.");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> ... It was nice.");
+
+        }
+
+        function yeah() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('where-two-one').style.display = 'inline-block';
+            document.getElementById('where-two-two').style.display = 'inline-block';
+            document.getElementById('where-two-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> Yeah.. I don't know.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> I drove out west and slept in my car.");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> I couldn't be here after everything.");
+        }
+
+        function tellMe() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('where-three-one').style.display = 'inline-block';
+            document.getElementById('where-three-two').style.display = 'inline-block';
+            document.getElementById('where-three-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> I just.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> I'm sorry.");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> It's been a really long year. years.");
+        }
+
+        function butStill() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+            document.getElementById('mad-one-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('where-four-one').style.display = 'inline-block';
+            document.getElementById('where-four-two').style.display = 'inline-block';
+            document.getElementById('where-four-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> I know, I know. I'm trying, I promise.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> I'm here now, aren't I?");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> That has to count for something.");
+        }
+
+        function youreMad() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-two-one').style.display = 'none';
+            document.getElementById('mad-two-two').style.display = 'none';
+            document.getElementById('mad-two-three').style.display = 'none';
+
+            document.getElementById('mad-one-one').style.display = 'inline-block';
+            document.getElementById('mad-one-two').style.display = 'inline-block';
+            document.getElementById('mad-one-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> Please say something.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> ...");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> You're mad.");
+        }
+
+        function worried() {
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            document.getElementById('intro1').innerHTML = ' ';
+            document.getElementById('intro2').innerHTML = ' ';
+            document.getElementById('intro3').innerHTML = ' ';
+
+            document.getElementById('start-one').style.display = 'none';
+            document.getElementById('start-two').style.display = 'none';
+            document.getElementById('start-three').style.display = 'none';
+            document.getElementById('sky-one-one').style.display = 'none';
+            document.getElementById('sky-one-two').style.display = 'none';
+            document.getElementById('sky-one-three').style.display = 'none';
+            document.getElementById('sky-two-one').style.display = 'none';
+            document.getElementById('sky-two-two').style.display = 'none';
+            document.getElementById('sky-two-three').style.display = 'none';
+            document.getElementById('sky-three-one').style.display = 'none';
+            document.getElementById('sky-three-two').style.display = 'none';
+            document.getElementById('sky-three-three').style.display = 'none';
+            document.getElementById('where-one-one').style.display = 'none';
+            document.getElementById('where-one-two').style.display = 'none';
+            document.getElementById('where-one-three').style.display = 'none';
+            document.getElementById('where-two-one').style.display = 'none';
+            document.getElementById('where-two-two').style.display = 'none';
+            document.getElementById('where-two-three').style.display = 'none';
+            document.getElementById('where-three-one').style.display = 'none';
+            document.getElementById('where-three-two').style.display = 'none';
+            document.getElementById('where-three-three').style.display = 'none';
+            document.getElementById('where-four-one').style.display = 'none';
+            document.getElementById('where-four-two').style.display = 'none';
+            document.getElementById('where-four-three').style.display = 'none';
+            document.getElementById('mad-one-one').style.display = 'none';
+            document.getElementById('mad-one-two').style.display = 'none';
+
+            document.getElementById('mad-two-one').style.display = 'inline-block';
+            document.getElementById('mad-two-two').style.display = 'inline-block';
+            document.getElementById('mad-two-three').style.display = 'inline-block';
+
+            wait(600).then(() => document.getElementById('intro1').innerHTML = "C:/inside/Amber> I'm doing fine. Thanks.");
+            wait(1425).then(() => document.getElementById('intro2').innerHTML = "C:/inside/Amber> ...");
+            wait(2250).then(() => document.getElementById('intro3').innerHTML = "C:/inside/Amber> I'm on top of it.");
+        }
+
+    </script>
+</head>
+<body onload="fadeInAmber()">
+    <img id="house-background" src="images/inside-my-house.png" draggable="false" (dragstart)="false;" class="unselectable">
+    <div id="nav">
+        <h1>
+            <a href="index.html">Home</a>
+        </h1>
+        <h2 id="inside">
+            <a href="inside.html">Go Inside</a></span>
+        </h2> 
+        <h4>
+            <a href="lookabout.html">Look Around
+            </a>
+        </h4>
+        <h4>
+            <span id="current-page"><a href="#">Talk to Amber
+            </a></span>
+        </h4>   
+        <h2>
+            <a href="outside.html">Go Outside</a>
+        </h2> 
+        <h4>
+            <a href="#" id="stay"><span class="random"></span>
+            </a>
+        </h4>   
+        <h4>
+            <a href="#" id="stay"><span class="random"></span>
+            </a>
+        </h4>
+    </div>
+
+    <div id="sliding-nav"></div>
+    <div id="sliding-nav-2"></div>
+    <div id="sliding-nav-3"></div>
+
+    
+
+    <div id="amber-container">
+        <img src="images/amber.png" id="amber">
+    </div>
+
+    <div id="popup-container">
+        <div id="popup">
+            <div id="popup-header">
+                <div id="popup-title">
+                    <p>
+                        Amber
+                    </p>
+                </div>
+                <div id="popup-navbtn" onclick="instaFade()">
+                    <p>
+                        &#215;
+                    </p>
+                </div>
+            </div>
+            <div id="popup-content">
+                <div id="popup-content-text">
+                    <p>
+                        Hey, sorry it's been a minute. So what do you <br > wanna talk about?
+                    </p>
+                </div>
+                <div id="popup-contentbtn">
+                    <div class="button-container">
+                        <button onclick="holdOn()" class="popup-button" id="skyButton">
+                            <p>
+                                What's with the sky?
+                            </p>
+                        </button>
+
+                        <button onclick="holdOn()" class="popup-button" id="whereButton">
+                            <p>
+                                Where have you been?
+                            </p>
+                        </button>
+                        <button onclick="holdOn()" class="popup-button" id="intermission1">
+                            <p>
+                                Dude, what?
+                            </p>
+                        </button>
+
+                        <button onclick="holdOn()" class="popup-button" id="intermission2">
+                            <p>
+                                Okay.
+                            </p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="console-container">
+        <div id="amber-term"> 
+            <div id="header-container">
+                <div id="amber-header">
+                    <div id="amber-title">
+                        <p>Command Prompt</p>
+                    </div>
+                    <div id="amber-navbtn" onclick="windowShrink()">
+                        <p>
+                            &#215;
+                        </p>
+                    </div>
+                    <div id="amber-maxbtn" onclick="windowExpand()">
+                        <p>
+                            &#9633;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="amber-content">
+                <div id="amber-reply">
+                    <p id="intro1">
+                        C:/inside/Amber> Alright, that's better.
+                    </p>
+                    <br >
+                    <p id="intro2">
+                        C:/inside/Amber> Sorry about that, what were you saying?
+                    </p>
+                    <br >
+                    <p id="intro3">
+                    </p>
+                </div>
+                <div id="your-reply">
+                    <p>
+                        ----------------------------------------------------------------
+                    </p>
+                    <button onclick="whereWereYou()" class="reply-button" id="start-one">
+                        <p>
+                            1. Where have you been?
+                        </p>
+                    </button>
+                    <button onclick="theSky()" class="reply-button" id="start-two">
+                        <p>
+                            2. What's wrong with the sky?
+                        </p>
+                    </button>
+                    <button onclick="youreMad()" class="reply-button" id="start-three">
+                        <p>
+                            3. ...
+                        </p>
+                    </button>
+                    <!--youreMad()-->
+                    <button style="display: none;" onclick="worried()" class="reply-button" id="mad-one-one">
+                        <p>
+                            1. No, I'm just worried.
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="whereWereYou()" class="reply-button" id="mad-one-two">
+                        <p>
+                            2. Where have you been?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="theSky()" class="reply-button" id="mad-one-three">
+                        <p>
+                            3. What's wrong with the sky?
+                        </p>
+                    </button>
+                     <!--worried()-->
+                    <button style="display: none;" onclick="whereWereYou()" class="reply-button" id="mad-two-one">
+                        <p>
+                            1. Where have you been?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="theSky()" class="reply-button" id="mad-two-two">
+                        <p>
+                            2. What's wrong with the sky?
+                        </p>
+                    </button>
+                    <button style="display: none;" class="reply-button" id="mad-two-three">
+                        <p>
+                            3. 
+                        </p>
+                    </button>
+                    <!--whereWereYou()-->
+                    <button style="display: none;" onclick="yeah()" class="reply-button" id="where-one-one">
+                        <p>
+                            1. Yeah?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="theSky()" class="reply-button" id="where-one-two">
+                        <p>
+                            2. What's wrong with the sky?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="where-one-three">
+                        <p>
+                            3. ...
+                        </p>
+                    </button>
+                    <!--yeah()-->
+                    <button style="display: none;" onclick="tellMe()" class="reply-button" id="where-two-one">
+                        <p>
+                            1. You could have stayed with me.., or at least have told me.
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="theSky()" class="reply-button" id="where-two-two">
+                        <p>
+                            2. What's wrong with the sky?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="where-two-three">
+                        <p>
+                            3. ...
+                        </p>
+                    </button>
+                    <!--tellMe()-->
+                    <button style="display: none;" onclick="butStill()" class="reply-button" id="where-three-one">
+                        <p>
+                            1. I know, but still...
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="theSky()" class="reply-button" id="where-three-two">
+                        <p>
+                            2. What's wrong with the sky?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="where-three-three">
+                        <p>
+                            3. ...
+                        </p>
+                    </button>
+                    <!--butStill-->
+                    <button style="display: none;" onclick="theSky()" class="reply-button" id="where-four-one">
+                        <p>
+                            1. What's wrong with the sky?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="where-four-two">
+                        <p>
+                            2. ...
+                        </p>
+                    </button>
+                    <button style="display: none;" class="reply-button" id="where-four-three">
+                        <p>
+                            3.
+                        </p>
+                    </button>
+                    <!-- theSky() -->
+                    <button style="display: none;" onclick="youreKidding()" class="reply-button" id="sky-one-one">
+                        <p>
+                            1. You're kidding.
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="whereWereYou()" class="reply-button" id="sky-one-two">
+                        <p>
+                            2. Where have you been?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="sky-one-three">
+                        <p>
+                            3. ...
+                        </p>
+                    </button>
+                    <!--youreKidding()-->
+                    <button style="display: none;" onclick="wth()" class="reply-button" id="sky-two-one">
+                        <p>
+                            1. Amber, what the hell?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="whereWereYou()" class="reply-button" id="sky-two-two">
+                        <p>
+                            2. Where have you been?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="sky-two-three">
+                        <p>
+                            3. ...
+                        </p>
+                    </button>
+                    <!--youreKidding()-->
+                    <button style="display: none;" onclick="whereWereYou()" class="reply-button" id="sky-three-two">
+                        <p>
+                            1. Where have you been?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="sky-three-three">
+                        <p>
+                            2. ...
+                        </p>
+                    </button>
+                    <button style="display: none;" class="reply-button" id="sky-three-one">
+                        <p>
+                            3.
+                        </p>
+                    </button>
+                    <!--wth()-->
+                    <button style="display: none;" onclick="whereWereYou()" class="reply-button" id="mad-one-one">
+                        <p>
+                            1. Where where you?
+                        </p>
+                    </button>
+                    <button style="display: none;" onclick="youreMad()" class="reply-button" id="mad-one-two">
+                        <p>
+                            2. ...
+                        </p>
+                    </button>
+                    <button style="display: none;" class="reply-button" id="mad-one-three">
+                        <p>
+                            3.
+                        </p>
+                    </button>
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+</body>
+<script>ChangingRandomString(10)</script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk</title>
+    <link rel="stylesheet" href="walk.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+
+    <script>
+           function randomString(Length)
+        {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
+            for( var i=0; i < Length; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function ChangingRandomString(Length)
+        {
+            setInterval(function(){
+                var elements = document.getElementsByClassName('random');
+                for(var i=0; i<elements.length; i++) { 
+                    elements[i].innerHTML = randomString(Length);
+                }
+            },25);
+        }
+
+        setInterval(function(){
+            random = (Math.floor((Math.random()*1)+1));
+            var addOrSub = Math.random() < 0.5 ? -1 : 1;
+            random = random * addOrSub; 
+            currenttemp = document.getElementById('weather');
+
+            document.getElementById('weather').innerHTML =  parseInt(currenttemp.innerHTML) + random;
+
+        }, 17500);
+
+    </script>
+</head>
+<body>
+    <img id="walk-background" src="images/long-walk.png" draggable="false" (dragstart)="false;" class="unselectable">
+    <div id="nav">
+        <h1>
+            <a href="index.html">Home</a>
+        </h1>
+        <h2 id="inside">
+            <a href="inside.html">Go Inside</a>
+        </h2> 
+        <h4>
+            <a id="stay" href="#"><span class="random"></span>
+            </a>
+        </h4>   
+        <h4>
+            <a id="stay" href="#"><span class="random"></span>
+            </a>
+        </h4> 
+        <h2>
+            <a href="outside.html">Go Outside</a>
+        </h2> 
+        <h4>
+            <span id="current-page"><a href="#">Take a Walk
+            </a></span>
+        </h4>
+        <h4>
+            <a href="cigs.html">Smoke Break
+            </a>
+        </h4>  
+    </div>
+
+    <div id="weather-container">
+        <div id="weather">17</div>
+        <div id="degree">°</div>
+    </div>
+
+    <div id="popup-container">
+        <div>
+
+        </div>
+    </div>
+
+    <div id="amber-container">
+        <div id="amber-term"> 
+            <div id="header-container">
+                <div id="amber-header">
+                    <div id="amber-title">
+                        <p>Command Prompt</p>
+                    </div>
+                    <div id="amber-navbtn" onclick="windowShrink()">
+                        <p>
+                            &#215;
+                        </p>
+                    </div>
+                    <div id="amber-maxbtn" onclick="windowExpand()">
+                        <p>
+                            &#9633;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="amber-content">
+                <p style="margin-bottom: 105px;">
+                    C:/inside/Amber> What time is it anyways? 
+                </p>
+
+                <p>
+                    C:/inside/Amber> \&#9633;
+                </p>
+                <p>
+                    C:/inside/Amber> \-. &#9633;
+                </p>
+                <p>
+                    C:/inside/Amber> I Don;t think i kn&#9633;w whats happeninh
+                </p>
+            </div>  
+        </div>
+    </div>
+
+</body>
+<script>ChangingRandomString(10)</script>
+</html>

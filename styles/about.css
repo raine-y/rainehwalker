@@ -11,6 +11,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    background-color: #B99DFF;
 }
 
 /* NAV */
@@ -56,7 +57,7 @@ body, html {
   }
 
   #about {
-    border-top: 5px solid #ECB9B8;
+    border-top: 5px solid #D664FF;
   }
 
   #tess:before, #portfolio:before, #about:before {
@@ -67,7 +68,7 @@ body, html {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: #ECB9B8;
+    background: #D664FF;
     opacity: .65;
     transform: scaleY(0);    transform-origin: 0 0;
     transition: transform 0.2s ease-out;
@@ -78,5 +79,40 @@ body, html {
   }
 
   #tess:hover, #portfolio:hover, #about:hover {
-    border-top: 5px solid #ECB9B8;
+    border-top: 5px solid #D664FF;
   }
+
+  /* SOCIALS */
+
+#social-container {
+  position: absolute;
+  z-index: 20;
+  right: 1.6rem;
+  bottom: 1.2rem;
+  width: auto;
+  height: auto;
+}
+
+#social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+
+#social > svg {
+  height: auto;
+  width: 2.6rem;
+}
+
+/* COPYRITGHT */
+
+#copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: .7rem;
+  z-index: 15;
+  font-family: 'Martian_Mono';
+  font-size: 11px;
+  color: #D664FF;
+}

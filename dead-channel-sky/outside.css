@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #212119;
+    background-image: url(images/ezgif.com-video-to-gif.gif);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#house-background {
+    z-index: 10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ~~~~~~~~~~~~~~~ */
+/* MAIN NAV SYSTEM */
+/* ~~~~~~~~~~~~~~~ */
+
+#nav {
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 36px;
+    top: 32px;
+    font-family: 'VT323', monospace;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+#nav > h1, h2, h4 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: #F8FAED;
+}
+
+a {
+    text-decoration: none;
+    color: #F8FAED;
+}
+
+#current-page > a:visited {
+    color: #F8FAED; 
+}
+
+h1 > a:hover {
+    text-decoration: underline;
+    padding-left: 3px;
+}
+
+h1 > a:visited {
+    color: #F8FAED;
+}
+
+h2 > a:hover {
+    text-decoration: underline;
+    padding-left: 3px;
+}
+
+h2 > a:visited {
+    color: #F8FAED;
+}
+
+h4 > a:hover {
+    text-decoration: underline;
+    padding-left: 3px;
+}
+
+h4 > a:visited {
+    color: #F8FAED;
+}
+
+h4 {
+    margin-bottom: 8px;
+}
+
+.random {
+    color: #f8faed;
+    opacity: .4;
+}
+
+.random {
+    color: #f8faed;
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.random:hover {
+    text-decoration: none;   
+}
+
+h4 > #stay:hover {
+    /* I have no clue why I need this here but not index.css... */
+    text-decoration: none;
+}
+
+#current-page {
+    color: #F8FAED;
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-color: #F8FAED;
+}
+
+#current-page > h2 {
+    color: #F8FAED;
+
+}
+
+/* ~~~~~~~ */
+/* Weather */
+/* ~~~~~~~ */
+
+#weather-container {
+    z-index: 30;
+    position: absolute;
+    right: 22px;
+    top: 28px;
+    color: #F8FAED;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(4, 16, 32, .6);
+    padding: 10px;
+    border: rgba(248, 250, 237, .4) solid 2px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-size: 38px;
+}
+
+#weather, #degree {
+    opacity: .6;
+    font-family: 'VT323', monospace;
+}
+
+#degree {
+    font-size: 30px;
+}

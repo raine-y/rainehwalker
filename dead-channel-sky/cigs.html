@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk</title>
+    <link rel="stylesheet" href="cigs.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+
+    <script>
+           function randomString(Length)
+        {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
+            for( var i=0; i < Length; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function ChangingRandomString(Length)
+        {
+            setInterval(function(){
+                var elements = document.getElementsByClassName('random');
+                for(var i=0; i<elements.length; i++) { 
+                    elements[i].innerHTML = randomString(Length);
+                }
+            },25);
+        }
+
+        setInterval(function(){
+            random = (Math.floor((Math.random()*1)+1));
+            var addOrSub = Math.random() < 0.5 ? -1 : 1;
+            random = random * addOrSub; 
+            currenttemp = document.getElementById('weather');
+
+            document.getElementById('weather').innerHTML =  parseInt(currenttemp.innerHTML) + random;
+
+        }, 17500);
+
+        function smoke7() {
+            document.getElementById('yes1').style.display = "none";
+            document.getElementById('fine').style.display = "none";
+            document.getElementById('no').style.display = "none";
+            document.getElementById('cig7').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "6";
+            document.getElementById('yes1').style.display = "none";
+            document.getElementById('yes2').style.display = "inline-block";
+            document.getElementById('yes2').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "Would you like another cigarette?";
+
+        }
+
+        function smoke6() {
+            document.getElementById('cig6').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "5";
+            document.getElementById('yes2').style.display = "none";
+            document.getElementById('yes3').style.display = "inline-block";
+            document.getElementById('yes3').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "How about another cigarette?";
+        }
+
+        function smoke5() {
+            document.getElementById('cig5').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "4";
+            document.getElementById('yes3').style.display = "none";
+            document.getElementById('yes4').style.display = "inline-block";
+            document.getElementById('yes4').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "Want another cigarette?";
+        }
+
+        function smoke4() {
+            document.getElementById('cig4').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "3";
+            document.getElementById('yes4').style.display = "none";
+            document.getElementById('yes5').style.display = "inline-block";
+            document.getElementById('yes5').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "Have another cigarette.";
+        }
+
+        function smoke3() {
+            document.getElementById('cig3').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "2";
+            document.getElementById('yes5').style.display = "none";
+            document.getElementById('yes6').style.display = "inline-block";
+            document.getElementById('yes6').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = ".";
+        }
+
+        function smoke2() {
+            document.getElementById('cig2').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "1";
+            document.getElementById('yes6').style.display = "none";
+            document.getElementById('yes7').style.display = "inline-block";
+            document.getElementById('yes7').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "One more?";
+        }
+
+        function smoke1() {
+            document.getElementById('cig1').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "Shit";
+            document.getElementById('yes7').style.display = "none";
+            document.getElementById('yes8').style.display = "inline-block";
+            document.getElementById('yes8').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "Would you like another cigarette?";
+        }
+        
+        function smoke0() {
+            document.getElementById('yes8').style.display = "none";
+            document.getElementById('fine').style.display = "none";
+            document.getElementById('popup-content-text').innerHTML = "Tough... Seven? Really?";
+        }
+
+        function yeahRight() {
+            document.getElementById('popup-content-text').innerHTML = "You know it doesnt work that way. <br > Have a cigarette.";
+            document.getElementById('yes1').style.display = "none";
+            document.getElementById('no').style.display = "none";
+            document.getElementById('fine').style.display = "inline-block";
+            document.getElementById('fine').style.opacity = "1";
+            document.getElementById('yes1').style.display = "none";
+
+        }
+
+        function okay() {
+            document.getElementById('cig7').className = 'fadeOut';
+            document.getElementById('count').innerHTML = "6";
+            document.getElementById('yes1').style.display = "none";
+            document.getElementById('fine').style.display = "none";
+            document.getElementById('yes2').style.display = "inline-block";
+            document.getElementById('yes2').style.opacity = "1";
+            document.getElementById('popup-content-text').innerHTML = "Would you like another cigarette?"; 
+        }
+
+    </script>
+</head>
+<body>
+    <img id="walk-background" src="images/smoke-break.png" draggable="false" (dragstart)="false;" class="unselectable">
+    <div id="nav">
+        <h1>
+            <a href="index.html">Home</a>
+        </h1>
+        <h2 id="inside">
+            <a href="inside.html">Go Inside</a>
+        </h2> 
+        <h4>
+            <a id="stay" href="#"><span class="random"></span>
+            </a>
+        </h4>   
+        <h4>
+            <a id="stay" href="#"><span class="random"></span>
+            </a>
+        </h4> 
+        <h2>
+            <a href="outside.html">Go Outside</a>
+        </h2> 
+        <h4>
+            <a href="walk.html">Take a Walk
+            </a>
+        </h4>
+        <h4>
+            <span id="current-page"><a href="#">Smoke Break
+            </a></span>
+        </h4>  
+    </div>
+
+    <div id="sliding-nav"></div>
+    <div id="sliding-nav-2"></div>
+    <div id="sliding-nav-3"></div>
+
+    <div id="weather-container">
+        <div id="weather">17</div>
+        <div id="degree">°</div>
+    </div>
+
+  <!--
+        smoking cig simulator, possibly have the more smoked 
+        make things look more and more crazy?
+
+        cause cig counter to blink and vanish,,, I forgot 
+    -->
+
+    <div id="cig-container">
+        <div id="cig-counter">
+            <div id="cig-title">
+                <p>Cigarettes:&nbsp;</p>
+                <p id="count"> 7</p>
+            </div>
+            <div id="pack">
+                <div class="cigarette" id="cig1">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+                <div class="cigarette" id="cig2">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+                <div class="cigarette" id="cig3">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+                <div class="cigarette" id="cig4">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+                <div class="cigarette" id="cig5">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+                <div class="cigarette" id="cig6">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+                <div class="cigarette" id="cig7">
+                    <div id="shaft"></div>
+                    <div id="filter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-container">
+        <div id="popup">
+            <div id="popup-header">
+                <div id="popup-title">
+                    <p>
+                        Command Prompt
+                    </p>
+                </div>
+                <div id="popup-navbtn" onclick="instaFade()">
+                    <p>
+                        &#215;
+                    </p>
+                </div>
+            </div>
+            <div id="popup-content">
+                <div id="popup-content-text">
+                    <p>
+                        Would you like a cigarette?
+                    </p>
+                </div>
+                <div id="popup-contentbtn">
+                    <div class="button-container">
+                        <button onclick="smoke7()" class="popup-button" id="yes1">
+                            <p>
+                                Yes
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke6()" class="popup-button" id="yes2">
+                            <p>
+                                Yeah
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke5()" class="popup-button" id="yes3">
+                            <p>
+                                Yeah
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke4()" class="popup-button" id="yes4">
+                            <p>
+                                Okay
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke3()" class="popup-button" id="yes5">
+                            <p>
+                                I know.
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke2()" class="popup-button" id="yes6">
+                            <p>
+                                Okay
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke1()" class="popup-button" id="yes7">
+                            <p>
+                                Yes
+                            </p>
+                        </button>
+                        <button style="display: none; opacity: 0;" onclick="smoke0()" class="popup-button" id="yes8">
+                            <p>
+                                Okay
+                            </p>
+                        </button>
+                        <!-- 888 -->
+                        <button onclick="yeahRight()" class="popup-button" id="no">
+                            <p>
+                                ...
+                            </p>
+                        </button>
+                        <!-- 888 -->
+                        <button onclick="okay()" class="popup-button" id="fine">
+                            <p>
+                                Okay
+                            </p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>ChangingRandomString(10)</script>
+</html>

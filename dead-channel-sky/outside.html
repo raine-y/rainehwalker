@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outside</title>
+    <link rel="stylesheet" href="outside.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+
+    <script>
+           function randomString(Length)
+        {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
+            for( var i=0; i < Length; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function ChangingRandomString(Length)
+        {
+            setInterval(function(){
+                var elements = document.getElementsByClassName('random');
+                for(var i=0; i<elements.length; i++) { 
+                    elements[i].innerHTML = randomString(Length);
+                }
+            },25);
+        }
+    </script>
+</head>
+<body>
+    <img id="house-background" src="images/outside-bs.png" draggable="false" (dragstart)="false;" class="unselectable">
+    <div id="nav">
+        <h1>
+            <a href="index.html">Home</a>
+        </h1>
+        <h2 id="inside">
+            <a href="inside.html">Go Inside</a>
+        </h2> 
+        <h4>
+            <a id="stay" href="#"><span class="random"></span>
+            </a>
+        </h4>   
+        <h4>
+            <a id="stay" href="#"><span class="random"></span>
+            </a>
+        </h4> 
+        <h2>
+            <span id="current-page"><a href="#">Go Outside</a></span>
+        </h2> 
+        <h4>
+            <a href="walk.html">Take a Walk
+            </a>
+        </h4>
+        <h4>
+            <a href="cigs.html">Smoke Break
+            </a>
+        </h4>  
+    </div>
+
+    <div id="weather-container">
+        <div id="weather">17</div>
+        <div id="degree">°</div>
+    </div>
+
+</body>
+<script>ChangingRandomString(10)</script>
+</html>

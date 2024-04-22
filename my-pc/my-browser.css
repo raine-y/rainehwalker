@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#app-divider {
+    height: 80%;
+    width: 3px;
+    background-color: #909090;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.app-nomargin {
+    margin-right: 0rem !important;
+}
+
+#browser {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 80px); /* fancy or broken, may your browser decide */
+    background-color: #bababa;
+    border: solid 3px #909090;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#browsernav {
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98.5vw;
+    height: 30px;
+    background-color: #d82f00a1;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090;     
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#browsernav > p {
+    margin-left: 10px;
+}
+
+#exit-button-2 {
+    border: 1px solid #545453;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(219, 66, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+#exit-button-2 > p {
+    padding-bottom: 1.5px; /* No comment :/ */
+}
+
+#searchbar {
+    width: 98.5vw;
+    height: 28px;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+#searchbar > div {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#searchbar > p {
+    font-size: 15px;
+    color: #252525;
+}
+
+#searchbar > #address {
+    margin-left: 4px;
+    padding-right: 4px;
+    border-right: solid 2px #909090;
+    
+}
+
+#browserbody {
+    margin-top: 6px;
+    width: 98.5vw;
+    height: 100%;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090;
+
+}
+
+
+h2 {
+    margin-left: 10px;
+}
+
+h4 {
+    margin-left: 12px;
+}
+
+#browserbody > p {
+    padding-left: 12px;
+    margin-right: 12px;
+}

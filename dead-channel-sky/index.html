@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Channel</title>
+    <link rel="stylesheet" href="index.css">
+        
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+        
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+
+    <script>
+
+        function instaFade() {
+
+           document.getElementById('mainPage').style.display = 'block';
+
+           document.getElementById('mainPage').style.opacity = "1";
+
+           document.getElementById('introScreen').style.display = 'none';
+        }
+
+        function fadeLoad() {
+            document.getElementById('popup-container').className = 'fadeOut';
+
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            wait(1200).then(() => document.getElementById('introScreen').className = 'fadeOut');
+
+            wait(1850).then(() => document.getElementById('mainPage').className = 'fadeIn');
+
+            wait(2200).then(() => document.getElementById('introScreen').style.display = 'none');
+
+            wait(1700).then(() => document.getElementById('mainPage').style.display = 'block');
+
+            wait(2400).then(() => console.log('...'));
+
+            wait(3000).then(() => console.log('what are you doing here? this is not for you, dont judge my promises...'));
+        }
+
+        function askAgain() {
+            document.getElementById('popup-content-text').innerHTML = 'Please?';
+
+            document.getElementById('pleaResponse').style.display = 'block';
+
+            document.getElementById('plea').style.display = 'none';
+
+        }
+
+        function notCool() {
+            document.getElementById('popup-content-text').innerHTML = '...';
+
+            document.getElementById('popup-contentbtn').style.display = 'none';
+
+            function wait(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            wait(1200).then(() => document.getElementById('introScreen').className = 'fadeOut');
+
+            wait(1850).then(() => document.getElementById('mainPage').className = 'fadeIn');
+
+            wait(2200).then(() => document.getElementById('introScreen').style.display = 'none');
+
+            wait(1700).then(() => document.getElementById('mainPage').style.display = 'block');
+
+            wait(2400).then(() => console.log('...'));
+
+            wait(3000).then(() => console.log('a**hole'));
+        }
+
+        
+        function randomString(Length)
+        {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
+            for( var i=0; i < Length; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function ChangingRandomString(Length)
+        {
+            setInterval(function(){
+                var elements = document.getElementsByClassName('random');
+                for(var i=0; i<elements.length; i++) { 
+                    elements[i].innerHTML = randomString(Length);
+                }
+            },25);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="introScreen">
+        <img id="mountain-background" src="images/MOSHED-2023-10-31-18-5-58.png" draggable="false" (dragstart)="false;" class="unselectable">
+        <div id="popup-container">
+            <div id="popup">
+                <div id="popup-header">
+                    <div id="popup-title">
+                        <p>
+                            Amber
+                        </p>
+                    </div>
+                    <div id="popup-navbtn" onclick="instaFade()">
+                        <p>
+                            &#215;
+                        </p>
+                    </div>
+                </div>
+                <div id="popup-content">
+                    <div id="popup-content-text">
+                        <p>
+                            Can we go inside please? It's really cold..
+                        </p>
+                    </div>
+                    <div id="popup-contentbtn">
+                        <div class="button-container">
+                            <button onclick="askAgain()" class="popup-button" id="plea">
+                                <p>
+                                    Five More Minutes?
+                                </p>
+                            </button>
+
+                            <button onclick="notCool()" class="popup-button" id="pleaResponse">
+                                <p>
+                                    Fine
+                                </p>
+                            </button>
+
+                        </div>
+                        <div class="button-container">
+                            <button onclick="fadeLoad()" class="popup-button" id="goodAnswer">
+                                <p>
+                                    Okay
+                                </p>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- DO NOT CROSS ! POLICE LINE ! DO NOT CROSS ! POLICE LINE -->
+    <div id="mainPage">
+
+        <img id="window-background" src="images/wedwed.png" draggable="false" (dragstart)="false;" class="unselectable">
+
+        <a href="inside.html" id="our-house-link">
+            <img id="our-house" src="images/MOSHED-2023-11-10-1-58-37.png" draggable="false" (dragstart)="false;" class="unselectable">
+        </a>
+
+        <div id="nav">
+            <h1>
+                <span id="current-page">Home</span>
+            </h1>
+            <h2 id="inside">
+                <a href="inside.html">Go Inside</a>
+            </h2> 
+            <h4>
+                <a href="#"><span class="random"></span>
+                </a>
+            </h4>   
+            <h4>
+                <a href="#"><span class="random"></span>
+                </a>
+            </h4>
+            <h2>
+                <a href="outside.html">Go Outside</a>
+            </h2> 
+            <h4>
+                <a href="#"><span class="random"></span>
+                </a>
+            </h4>   
+            <h4>
+                <a href="#"><span class="random"></span>
+                </a>
+            </h4>
+        </div>
+    </div>
+</body>
+<script>ChangingRandomString(10)</script>
+</html>

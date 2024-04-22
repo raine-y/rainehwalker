@@ -1,0 +1,130 @@
+#toolbar {
+    background-color: #101009;
+    width: 100vw;
+    height: 78px;
+    position: absolute;
+    bottom: 0px;
+    border-top: solid 2px rgba(16, 16, 9, .6);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+#toolbar {
+    display: flex;
+}
+
+#apps {
+    display: flex;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+}
+
+.app-container {
+    width: 65px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.2rem;
+}
+
+/* ---------- */
+/* CLOCK TIME */
+/* ---------- */
+
+#digital-clock {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 48%;
+    right: 1.75rem;
+    transform: translateY(-50%);
+}
+
+/* ---------- */
+/* NAV  POPUP */
+/* ---------- */
+
+#nav-popup {
+    z-index: 10;
+    width: 275px;
+    padding-bottom: 25px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    text-align: center;
+    background-color: #a0a0a0;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090; 
+}
+
+#nav-popup-2 {
+    z-index: 10;
+    width: 275px;
+    padding-bottom: 25px;
+    position: absolute;
+    top: 216px;
+    right: 20px;
+    text-align: center;
+    background-color: #a0a0a0;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090; 
+}
+
+#nav-toolbar {
+    width: 100%;
+    height: 34px;
+    position: relative;
+    top: 0;
+    border-bottom: #909090 solid 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-toolbar > p {
+    margin: 2px;
+    margin-left: 10px;
+}
+
+#nav-content > button {
+    border-radius: 0cm;
+    font-size: 16px;
+}
+
+#reload-link {
+    text-decoration: none;
+    color: #101009;
+    font-weight: 600;
+}
+
+a#reload-link:focus {
+    color: #222222;
+}
+
+a#reload-link:hover {
+    color: #222222;
+}
+
+#exit-button {
+    border: 1px solid #545453;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(192, 127, 127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 10px;
+    cursor: not-allowed;
+}
+
+#exit-button > p {
+    padding-bottom: 1.5px; /* No comment :/ */
+}

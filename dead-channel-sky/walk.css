@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #212119;
+    background-image: url(images/ezgif.com-video-to-gif.gif);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+#walk-background {
+    z-index: 10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ~~~~~~~~~~~~~~~ */
+/* MAIN NAV SYSTEM */
+/* ~~~~~~~~~~~~~~~ */
+
+#nav {
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 36px;
+    top: 32px;
+    font-family: 'VT323', monospace;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+#nav > h1, h2, h4 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: #F8FAED;
+}
+
+a {
+    text-decoration: none;
+    color: #F8FAED;
+}
+
+#current-page > a:visited {
+    color: #F8FAED; 
+}
+
+h1 > a:hover {
+    text-decoration: underline;
+    padding-left: 3px;
+}
+
+h1 > a:visited {
+    color: #F8FAED;
+}
+
+h2 > a:hover {
+    text-decoration: underline;
+    padding-left: 3px;
+}
+
+h2 > a:visited {
+    color: #F8FAED;
+}
+
+h4 > a:hover {
+    text-decoration: underline;
+    padding-left: 3px;
+}
+
+h4 > a:visited {
+    color: #F8FAED;
+}
+
+h4 {
+    margin-bottom: 8px;
+}
+
+.random {
+    color: #f8faed;
+    opacity: .4;
+}
+
+.random {
+    color: #f8faed;
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.random:hover {
+    text-decoration: none;   
+}
+
+h4 > #stay:hover {
+    /* I have no clue why I need this here but not index.css... */
+    text-decoration: none;
+}
+
+#current-page {
+    color: #F8FAED;
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-color: #F8FAED;
+}
+
+#current-page > h2 {
+    color: #F8FAED;
+
+}
+
+/* ~~~~~~~ */
+/* Weather */
+/* ~~~~~~~ */
+
+#weather-container {
+    z-index: 30;
+    position: absolute;
+    right: 22px;
+    top: 28px;
+    color: #F8FAED;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(4, 16, 32, .6);
+    padding: 10px;
+    border: rgba(248, 250, 237, .4) solid 2px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-size: 38px;
+}
+
+#weather, #degree {
+    opacity: .6;
+    font-family: 'VT323', monospace;
+}
+
+#degree {
+    font-size: 30px;
+}
+
+/* ~~~~~~~~~~~~~~ */
+/* Amber Terminal */
+/* ~~~~~~~~~~~~~~ */
+
+#amber-container {
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 9%;
+    right: 140px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: solid 1.5px #9c9c9c; /* why does 1.5px actually show a difference and how is it half a pixel ..? */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#amber-term {
+    background-color: transparent;
+    width: 400px;
+    height: 230px;
+    padding-top: 0px;
+    border-top:solid 3px  #F8FAED;
+    border-left: solid 3px #F8FAED;
+    border-bottom:solid 3px #5A5B56;
+    border-right:solid 3px #5A5B56;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#amber-header {
+    cursor: default;
+    width: 396px;
+    height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, #0E2769 , #ABC1DB);
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-container {
+    background-color: #CBC8C1;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-bottom:solid 3px #5A5B56;
+}
+
+#amber-content {
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(243, 243, 238);
+    font-size: 14px;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    height: 234px;
+    box-sizing: border-box;
+    background-color: rgba(16, 20, 40, 0.8);
+}
+
+#amber-content > p {
+    margin-top: 6px;
+    margin-bottom: 4px;
+    margin-left: 6px;
+}
+
+#amber-title {
+    color: rgb(243, 243, 238);
+    margin-left: 4px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#amber-navbtn {
+    margin-right: 4px;
+    height: 18px;
+    width: 18px;
+    border-top:solid 1px  #F8FAED;
+    border-left: solid 1px #F8FAED;
+    border-bottom:solid 1px #5A5B56;
+    border-right:solid 1px #5A5B56;
+    background-color: #CBC8C1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#amber-navbtn:hover {
+    background-color: #9c9c9c;
+}
+
+#amber-navbtn > p {
+    padding-bottom: 1px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #7C7B77;
+}
+
+#amber-maxbtn {
+    margin-right: 4px;
+    height: 18px;
+    width: 18px;
+    border-top:solid 1px  #F8FAED;
+    border-left: solid 1px #F8FAED;
+    border-bottom:solid 1px #5A5B56;
+    border-right:solid 1px #5A5B56;
+    background-color: #CBC8C1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#amber-maxbtn:hover {
+    background-color: #9c9c9c;
+}
+
+#amber-maxbtn > p {
+    padding-bottom: 6px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #7C7B77;
+}

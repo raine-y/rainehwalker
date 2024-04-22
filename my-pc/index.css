@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #101009;
+}
+
+.ibm-semibold {
+    font-weight: 600;
+}
+
+/* BOOT TEXT */
+
+#boot-text {
+    z-index: 1;
+    margin-left:20px;
+    margin-top: 20px;
+    cursor: default;
+}
+
+#boot-text > p {
+    font-size: 18px;
+    color: rgba(236, 236, 228, 0.603);
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 1.8;
+}
+
+#boot-text > .glitch-me{
+
+    margin-top: -18px;
+
+    animation: glitch 1s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  #boot-text > .glitch-me:before,
+  #boot-text > .glitch-me:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  #boot-text > .glitch-me:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  #boot-text > .glitch-me:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+
+/* CONTROL PANEL */
+
+#control-panel {
+    z-index: 2;
+    background-color: #101009;
+    border: 1.5px solid #f0d87a;
+    min-width: 350px;
+    min-height: 380px;
+    max-width: 800px;
+    max-height: 846px;
+    width: 44vw;
+    height: 59vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(243, 243, 238);
+    font-size: 19px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#control-header-container {
+  padding: 4px;
+  border: #f0d87a solid 1.5px;
+  position: sticky;
+}
+
+
+#control-panel-header {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    background-color: #7a6a3d;
+    justify-content: center;
+    align-items: center;
+}
+
+#control-panel-header > p {
+    color: #101010;
+    font-weight: 600;
+    cursor: default;
+}
+
+.control-panel-center {
+    text-align: center;
+}
+
+.control-panel-center > p {
+  cursor: default;
+}
+
+#os-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 75%;
+    min-width: 300px;
+    align-self: center;
+    cursor: default;
+    height: 180px;
+}
+
+.os-title {
+    font-size: 16px;
+    text-align: center;
+    color: rgba(228, 228, 219, 0.785);
+}
+
+#os-options-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+#os-button-1 {
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width:120px;
+    height: 42px;
+    background-color: #7a6a3d;
+    border: 1.5px solid #c5b264;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+
+#os-button-2 {
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 42px;
+    background-color: #7a6a3d;
+    border: 1.5px solid #c8b466;
+    font-size: 19px;
+    font-weight: 600;
+    /* GLITCH IT */
+}
+
+#os-button-1:hover {
+   transform: scale(1.05);
+}
+
+#os-button-2:hover {
+  transform: scale(1.05);
+ /*GLITCH IT*/
+ animation-name: buttonglitch;
+ animation-duration: .75s;
+ animation-iteration-count: infinite;
+
+}
+
+@keyframes buttonglitch {
+  from {
+    transform: translate(8px, 6px);
+    background-color:#7a6a3d;
+    border: 1.5px solid #c5b264;
+  }
+
+  80% {
+    transform: translate(-6px,-2px);
+    background-color: #7a6e3d;
+    border: 1.5px solid #c59364;
+  }
+
+  81% {
+    background-color: #7a623d;
+    transform: translateX(9px);
+    border: 3px solid #c5b264;
+  }
+
+  85% {
+    transform: translateX(-5px);
+    background-color: #7a3d3d;
+    border: 2px solid #c56464;
+
+  }
+
+  86% {
+    background-color: #101009;
+    border: 2px solid #101009;
+  }
+
+  87% {
+    background-color: #7a533d;
+    border: 2px solid #c59364;
+
+  }
+
+}
+
+.resourcememory {
+  margin-left: auto ;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  font-size: 16px;
+  color: rgb(243, 243, 238);
+  margin-bottom: 6px;
+}
+
+.dotteddiv {
+  height: 1px;
+  width: 75%;
+  border: none;
+  border-top: 1.5px dashed rgb(243, 243, 238);
+}
+
+/* --------------*/
+/* MEDIA QUERIES */
+/* --------------*/
+
+#too-small {
+  display: none;
+  visibility: hidden;  
+  z-index: 10;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #101009;
+  justify-content: center;
+  align-items: center;
+}
+
+#too-small > p {
+  font-size: 18px;
+  color: rgba(236, 236, 228, 0.603);
+}
+
+@media screen and (max-height: 450px) {
+  #too-small {
+    display: flex;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #too-small {
+    display: flex;
+    visibility: visible;
+  }
+}

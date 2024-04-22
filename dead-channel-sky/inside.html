@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside</title>
+    <link rel="stylesheet" href="inside.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+    </style>
+
+    <script>
+           function randomString(Length)
+        {
+            var text = "";
+            var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
+            for( var i=0; i < Length; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function ChangingRandomString(Length)
+        {
+            setInterval(function(){
+                var elements = document.getElementsByClassName('random');
+                for(var i=0; i<elements.length; i++) { 
+                    elements[i].innerHTML = randomString(Length);
+                }
+            },25);
+        }
+
+        function windowShrink() {
+            document.getElementById('amber-navbtn').style.display = 'none';
+            document.getElementById('amber-navbtn').style.opacity = '0';
+            document.getElementById('amber-content').style.height = '0px';
+            document.getElementById('amber-container').style.height = '36px';
+            document.getElementById('amber-maxbtn').style.display = 'flex';
+            document.getElementById('amber-maxbtn').style.opacity = '1';
+        }
+
+        function windowExpand() {
+            document.getElementById('amber-maxbtn').style.display = 'none';
+            document.getElementById('amber-maxbtn').style.opacity = '0';
+            document.getElementById('amber-content').style.height = '234px';
+            document.getElementById('amber-container').style.height = 'auto';
+            document.getElementById('amber-navbtn').style.display = 'flex';
+            document.getElementById('amber-navbtn').style.opacity = '1';
+        }
+    </script>
+</head>
+<body>
+    <img id="house-background" src="images/inside-my-house.png" draggable="false" (dragstart)="false;" class="unselectable">
+    <div id="nav">
+        <h1>
+            <a href="index.html">Home</a>
+        </h1>
+        <h2 id="inside">
+            <span id="current-page"><a href="#">Go Inside</a></span>
+        </h2> 
+        <h4>
+            <a href="lookabout.html">Look Around
+            </a>
+        </h4>
+        <h4>
+            <a href="amber.html">Talk to Amber
+            </a>
+        </h4>   
+        <h2>
+            <a href="outside.html">Go Outside</a>
+        </h2> 
+        <h4>
+            <a href="#" id="stay"><span class="random"></span>
+            </a>
+        </h4>   
+        <h4>
+            <a href="#" id="stay"><span class="random"></span>
+            </a>
+        </h4>
+    </div>
+
+    <div id="sliding-nav"></div>
+    <div id="sliding-nav-2"></div>
+    <div id="sliding-nav-3"></div>
+
+
+    <div id="file-flex">
+        <button id="delysid">
+            <img src="images/lucy.png">
+            <p>delysid.avi</p>
+        </button>
+    </div>
+
+    <div id="popup-container">
+        <div class="fatal-error">
+            <div id="fatal-header">
+                <div id="fatal-title">
+                    <p>
+                        <i>Fatal Error</i>
+                    </p>
+                </div>
+                <div id="fatal-navbtn">
+                    <p>
+                        &#215;
+                    </p>
+                </div>
+            </div>
+            <div id="fatal-content">
+                <div id="fatal-content-text">
+                    <p>
+                        10: ERROR_ARENA_TRASHED
+                    </p>
+                </div>
+                <div id="fatal-contentbtn">
+                    <div class="button-container">
+                        <button class="popup-button">
+                            <p>
+                                Help
+                            </p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tear-container">
+        <div class="fatal-error"></div>
+    </div>
+    <div id="tear-container-2">
+        <div class="fatal-error"></div>
+    </div> 
+    <div id="tear-container-3">
+        <div class="fatal-error"></div>
+    </div>
+    <div id="tear-container-4">
+        <div class="fatal-error"></div>
+    </div>
+    <div id="tear-container-5">
+        <div class="fatal-error"></div>
+    </div>
+    <div id="tear-container-6">
+        <div class="fatal-error" id="push-me-down"></div>
+    </div>
+    <div id="tear-container-7">
+        <div class="fatal-error" id="push-me-next"></div>
+    </div>
+   
+    <div id="amber-container">
+        <div id="amber-term"> 
+            <div id="header-container">
+                <div id="amber-header">
+                    <div id="amber-title">
+                        <p>Command Prompt</p>
+                    </div>
+                    <div id="amber-navbtn" onclick="windowShrink()">
+                        <p>
+                            &#215;
+                        </p>
+                    </div>
+                    <div id="amber-maxbtn" onclick="windowExpand()">
+                        <p>
+                            &#9633;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="amber-content">
+                <p>
+                    C:/inside/Amber> Sorry it's such a mess, <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    I'll clean up eventually.
+                </p>
+                <br >
+                <p>
+                    C:/inside/Amber> ...
+                </p>
+                <br >
+                <p>
+                    C:/inside/Amber> Probably.
+                </p>
+            </div>  
+        </div>
+    </div>
+
+</body>
+<script>ChangingRandomString(10)</script>
+</html>

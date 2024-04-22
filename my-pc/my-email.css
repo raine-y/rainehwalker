@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* -------- */
+/* Email :) */
+/* -------- */
+
+#webescape {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 80px); /* fancy or broken, may your browser decide */
+    background-color: #bababa;
+    border: solid 3px #909090;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#escapenav {
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98.5vw;
+    height: 30px;
+    background-color: #d82f00a1;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090;    
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#escapenav > p {
+    margin-left: 10px;
+}
+
+#exit-button-2 {
+    border-left: solid 1px #909090;
+    border-top: solid 1px #909090;
+    border-right: 1px solid #545453;
+    border-bottom: 1px solid #545453;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(219, 66, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+#exit-button-2 > p {
+    padding-bottom: 1.5px; /* No comment :/ */
+}
+
+#webescape-toolbar > ul > li {
+    display: inline-block;
+    margin-right: 25px;
+    cursor: not-allowed;
+}
+
+#webescape-toolbar > ul {
+    margin-top: 0;
+    padding-top: 0px;
+    margin-bottom: 4px;
+    padding-left: 0;
+    margin-left: 12px;
+}
+
+#webescape-toolbar {
+    width: 98.5vw;
+}
+
+#app-divider {
+    height: 80%;
+    width: 3px;
+    background-color: #909090;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.app-nomargin {
+    margin-right: 0rem !important;
+}
+
+#mailnav-flex {
+    display: flex;
+    flex-direction: row;
+    width: 84vw;
+    height: 200px;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090; 
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+}
+
+#mailnav-folder {
+    display: flex;
+    width: 35%;
+    border-right: solid 2px #909090;
+}
+
+#mailnav-inbox {
+    border-left: solid 2px #d7d7d7;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    border-right: dotted 2px #d7d7d7;
+    overflow-x: scroll;
+}
+
+#mailnav-message {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 84vw;
+    height: 250px;
+    border-top: #d7d7d7 2px solid; 
+    border-left: #d7d7d7 2px solid; 
+    border-bottom: solid 2px #909090;
+    border-right: solid 2px #909090; 
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+
+#mailnav-message h4 {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -2px;
+    margin-bottom: -3px;
+}
+
+#mailnav-message h5 {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#mailnav-message p {
+    margin-top: -1px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#black-sidebar {
+    width: 20%;
+    height: 197px;
+    background-color: #545453;
+}
+
+#folderflex {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 76%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding-left: 6px;
+    background-color: #c4c4c4;
+}
+
+#folderflex > p {
+    margin-left: 6px;
+}
+
+.email-thumbnail {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding-left: 6px;
+    background-color: #c4c4c4;
+}
+
+.email-thumbnail-alt {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding-left: 6px;
+    border: 1px solid #c4c4c4;
+}

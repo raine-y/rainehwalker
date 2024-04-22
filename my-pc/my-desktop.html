@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY_PC</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="my-desktop.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d7f8c237cc.js" crossorigin="anonymous"></script>
+    <script>
+        function ShowHideSmile() {
+            var popup = document.getElementById('smile-popup');
+            if (popup.style.display == 'none') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+        function ShowHideIcon() {
+            var thumbnail = document.getElementById('smile-button');
+            var popup = document.getElementById('smile-popup');
+            if (popup.style.display == 'none') {
+                thumbnail.style.border = '1.5px solid transparent'; /* invis border prevents reformatting */
+                thumbnail.style.background = 'transparent';
+            } else {
+                thumbnail.style.border = '1.5px solid #707060';
+                thumbnail.style.background = 'rgba(2, 2, 2, .07)';
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- Links to my-email & my-browser -->
+    <div id="nav-popup">
+        <div id="nav-toolbar">
+            <p>Return to Start?</p>
+            <div id="exit-button">
+                <p>&#128473;</p>
+            </div>
+        </div>
+        <div id="nav-content">
+            <p>
+                RESTART COMPUTER: 
+            </p>
+            <button><a href="index.html" id="reload-link">HERE!</a></button>
+        </div>
+    </div>
+
+
+    <div id="nav-popup-2">
+        <div id="nav-toolbar">
+            <p>Do <b>you</b> know where to go?</p>
+            <div id="exit-button">
+                <p>&#128473;</p>
+            </div>
+        </div>
+        <div id="nav-content">
+            <p>
+                Switch Opperating System: 
+            </p>
+            <button><a href="i-am-lost.html" id="reload-link">HERE!</a></button>
+        </div>
+    </div>
+
+    <div id="smile-popup" style="display: none;">
+        <div id="smile-popup-flex">
+            <p>
+                Smile.jpg
+            </p>
+            <button id="smile-popup-button" onclick="ShowHideSmile(); ShowHideIcon();">
+                <p>
+                    &#128473;
+                </p>
+            </button>
+        </div>
+        <img src="Smile.jpg">
+        <div id="failed-load">
+            <p>
+                Image failed to load.
+            </p>
+        </div>
+    </div>
+
+    <div id="file-flex">
+        <!-- U gotta have a Smile.jpg-->
+        <button id="smile-button" onclick="ShowHideSmile(); ShowHideIcon();">
+            <div id="smile">
+                <div id="smileicon"></div>
+                <p>Smile.jpg</p>
+            </div>
+        </button>
+    </div>
+
+    <div id="toolbar">
+        <div id="apps">
+            <div class="app-container app-nomargin">
+                <a href="my-desktop.html">
+                    <i class="fa-solid fa-computer fa-3x" style="color: #7b7b7b;"></i>                </a>
+            </div>
+            <div class="app-container app-nomargin">
+                <div id="app-divider">
+
+                </div>
+            </div>
+            <div class="app-container">
+                <a href="my-browser.html">
+                    <i class="fa-solid fa-globe fa-3x" style="color: #deddda;"></i>
+                </a>
+            </div>
+            <div class="app-container">
+                <a href="my-email.html">
+                    <i class="fa-solid fa-envelope fa-3x" style="color: #deddda;"></i>
+                </a>
+            </div>
+        </div>
+        <div id = "digital-clock"></div>
+        <script src = "javascript/clock.js"> </script>
+    </div>
+</body>
+</html>
