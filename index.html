@@ -57,11 +57,8 @@
                     <div class="cubeLeft"></div>
                     <div class="cubeLeft"></div>
                     <div class="cubeLeft"></div>
-                    <div class="cubeLeft"></div>
                 </div>
                 <div class="cubeLeft-pen-2">
-                    <div class="cubeLeft2"></div>
-                    <div class="cubeLeft2"></div>
                     <div class="cubeLeft2"></div>
                     <div class="cubeLeft2"></div>
                     <div class="cubeLeft2"></div>
@@ -76,11 +73,8 @@
                     <div class="cubeRight"></div>
                     <div class="cubeRight"></div>
                     <div class="cubeRight"></div>
-                    <div class="cubeRight"></div>
-                    <div class="cubeRight"></div>
                 </div>
                 <div class="cubeRight-pen-2">
-                    <div class="cubeRight2"></div>
                     <div class="cubeRight2"></div>
                     <div class="cubeRight2"></div>
                     <div class="cubeRight2"></div>
@@ -146,7 +140,7 @@
             anime({
                 targets: cubesLeft,
                 translateX: function() {
-                return anime.random(500, 1000);
+                return anime.random(300, 900);
                 },
                 duration: 2750,
                 opacity: 1,
@@ -163,9 +157,9 @@
             anime({
                 targets: cubesLeft2,
                 translateX: function() {
-                return anime.random(500, 1000);
+                return anime.random(300, 900);
                 },
-                delay: 1500,
+                delay: 1375,
                 duration: 2750,
                 opacity: 1,
                 direction: 'normal',
@@ -181,7 +175,7 @@
             anime({
                 targets: cubesRight,
                 translateX: function() {
-                return anime.random(-500, -1000);
+                return anime.random(-300, -900);
                 },
                 duration: 2750,
                 opacity: 1,
@@ -198,9 +192,9 @@
             anime({
                 targets: cubesRight2,
                 translateX: function() {
-                return anime.random(-500, -1000);
+                return anime.random(-300, -900);
                 },
-                delay: 1500,
+                delay: 1375,
                 duration: 2750,
                 opacity: 1,
                 direction: 'normal',
