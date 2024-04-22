@@ -10,14 +10,62 @@
 <body>
     <div id="nav-container">
         <div id="nav">
-            <a href="index.html">Tess Walker</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About</a>
+            <div class="nav-link" id="tess-container">
+                <a id="tess" href="index.html">Tess Walker</a>
+            </div>
+            <div id="nav-right">
+                <div class="nav-link" id="portfolio-container">
+                    <a id="portfolio" href="portfolio.html">Portfolio</a>
+                </div>
+                <div class="nav-link" id="about-container">
+                    <a id="about" href="about.html">About</a>
+                </div>
+            </div>
         </div>
     </div>
     <div id="slider-container">
         <div class="slider">
             <div id="slide-1-container">
+                <div class="cubeLeft-pen">
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                    <div class="cubeLeft"></div>
+                </div>
+                <div class="cubeLeft-pen-2">
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                    <div class="cubeLeft2"></div>
+                </div> 
+                <div class="cubeRight-pen">
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                    <div class="cubeRight"></div>
+                </div>
+                <div class="cubeRight-pen-2">
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                    <div class="cubeRight2"></div>
+                </div>
                 <img id="left-image" src="images/layered-steps-haikei.svg">
                 <img id="right-image" src="images/layered-steps-haikei(1).svg"
                 <div id="slide-1">
@@ -41,6 +89,112 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            const textEl = document.getElementById('intro-line-1');
+            const text = "Hey, I'm Tess :3";
+            let delay = 105; 
+            let duration = 2000; 
+            
+            function animateType() {
+              anime({
+                targets: textEl,
+                opacity: 1,
+                easing: 'linear',
+                duration: 500
+              });
+            
+              anime({
+                targets: textEl,
+                innerHTML: [0, text.length],
+                easing: 'linear',
+                round: 1,
+                delay: 500,
+                duration: duration,
+                update: function () {
+                  textEl.innerHTML = text.substring(0, Math.round(textEl.innerHTML));
+                },
+              });
+            }
+
+            const cubesLeft = document.querySelectorAll('.cubeLeft-pen div');
+
+            function randomLeft() {
+            anime({
+                targets: cubesLeft,
+                translateX: function() {
+                return anime.random(500, 1000);
+                },
+                duration: 2750,
+                opacity: 1,
+                direction: 'normal',
+                loop: true,
+                easing: 'linear',
+                opacity: 0,
+            });
+            }
+
+            const cubesLeft2 = document.querySelectorAll('.cubeLeft-pen-2 div');
+
+            function randomLeft2() {
+            anime({
+                targets: cubesLeft2,
+                translateX: function() {
+                return anime.random(500, 1000);
+                },
+                delay: 1500,
+                duration: 2750,
+                opacity: 1,
+                direction: 'normal',
+                loop: true,
+                easing: 'linear',
+                opacity: 0,
+            });
+            }
+            
+            const cubesRight = document.querySelectorAll('.cubeRight-pen div');
+
+            function randomRight() {
+            anime({
+                targets: cubesRight,
+                translateX: function() {
+                return anime.random(-500, -1000);
+                },
+                duration: 2750,
+                opacity: 1,
+                direction: 'normal',
+                loop: true,
+                easing: 'linear',
+                opacity: 0,
+            });
+            }
+
+            const cubesRight2 = document.querySelectorAll('.cubeRight-pen-2 div');
+
+            function randomRight2() {
+            anime({
+                targets: cubesRight2,
+                translateX: function() {
+                return anime.random(-500, -1000);
+                },
+                delay: 1500,
+                duration: 2750,
+                opacity: 1,
+                direction: 'normal',
+                loop: true,
+                easing: 'linear',
+                opacity: 0,
+            });
+            }
+
+            randomLeft();
+            randomRight();
+            randomLeft2();
+            randomRight2();
+            setTimeout(animateType, delay);
+            
+        </script>
+
         <div class="silder">
             <div id="slide-2-container">
                 <div id="slide-2">
@@ -56,37 +210,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const textEl = document.getElementById('intro-line-1');
-        const text = "Hey, I'm Tess :3";
-        let delay = 105; 
-        let duration = 2000; 
-        
-        function animateType() {
-          anime({
-            targets: textEl,
-            opacity: 1,
-            easing: 'linear',
-            duration: 500
-          });
-        
-          anime({
-            targets: textEl,
-            innerHTML: [0, text.length],
-            easing: 'linear',
-            round: 1,
-            delay: 500,
-            duration: duration,
-            update: function () {
-              textEl.innerHTML = text.substring(0, Math.round(textEl.innerHTML));
-            },
-          });
-        }
-        
-        setTimeout(animateType, delay);
-        
-    </script>
-
 </body>
 </html>
