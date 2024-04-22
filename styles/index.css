@@ -149,15 +149,11 @@ body, html {
     transition: transform 0.2s ease-out;
   }
 
-  #tess:hover:before, #about:hover:before {
+  #tess:hover:before, #about:hover:before, #portfolio:hover:before {
     transform: scaleY(1);
   }
 
-  #portfolio:hover:before {
-    transform: scaleY(1);
-  }
-
-  #portfolio:hover, #about:hover {
+  #tess:hover, #portfolio:hover, #about:hover {
     border-top: 5px solid #ECB9B8;
   }
 

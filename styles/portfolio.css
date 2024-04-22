@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323/VT323-Regular.ttf');
+  }
+  
+@font-face {
+    font-family: 'Martian_Mono';
+    src: url('../fonts/Martian_Mono/static/MartianMono-Regular.ttf');
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV */
+
+#nav-container {
+    position: absolute;
+    z-index: 20;
+    top: 1rem;
+    background-color: #3C3C3C;
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    z-index: 25;
+}
+
+#nav-right {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.nav-link > a:link, a:active, a:visited {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-family: 'VT323';
+    font-size: 2.4rem;
+}
+
+#tess, #portfolio, #about {
+    padding: 10px;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition: color 0.25s;
+    border-top: 5px solid #707070;
+  }
+
+  #portfolio {
+    border-top: 5px solid #ECB9B8;
+  }
+
+  #tess:before, #portfolio:before, #about:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #ECB9B8;
+    opacity: .65;
+    transform: scaleY(0);    transform-origin: 0 0;
+    transition: transform 0.2s ease-out;
+  }
+
+  #tess:hover:before, #about:hover:before, #portfolio:hover:before {
+    transform: scaleY(1);
+  }
+
+  #tess:hover, #portfolio:hover, #about:hover {
+    border-top: 5px solid #ECB9B8;
+  }
