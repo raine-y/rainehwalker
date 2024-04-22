@@ -8,6 +8,11 @@
     src: url('../fonts/Martian_Mono/static/MartianMono-Regular.ttf');
   }
 
+@font-face {
+    font-family: 'Martian_Mono_SemiBold';
+    src: url('../fonts/Martian_Mono/static/MartianMono-SemiBold.ttf');
+  }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -223,10 +228,85 @@ body, html {
 
 ul {
   list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  font-family: 'Martian_Mono_SemiBold';
+  color: #eee0f5;
+  font-style: italic;
+  font-weight: 700;
+}
+
+li > a {
+  color: #eee0f5;
+  font-size: 1rem;
+  font-family: 'Martian_Mono';
+}
+
+li > a:link {
+  color: #eee0f5;
+  font-size: 1rem;
+  font-family: 'Martian_Mono';
+}
+
+li > a:active {
+  color: #eee0f5;
+  font-size: 1rem;
+  font-family: 'Martian_Mono';
+}
+
+li > a:visited {
+  color: #7c7c7c;
+  font-size: 1rem;
+  font-family: 'Martian_Mono';
+}
+
+li > p {
+  color: #eee0f5;
+  font-size: 14px;
+  font-family: 'Martian_Mono';
+  width: 82%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #poster-grid {
+  margin-top: 45px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+}
+
+img {
+  max-width: 700px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#poster-grid > img {
+  max-width: 300px;
+}
+
+.left {
+  margin-left: auto;
+  margin-right: .75rem;
+}
+
+.right {
+  margin-left: .75rem;
+  margin-right: auto;
+}
+
+.bottom {
+  margin-top: .75rem;
+  margin-bottom: auto;
+}
+
+.top {
+  margin-top: auto;
+  margin-bottom: .75rem;
 }
