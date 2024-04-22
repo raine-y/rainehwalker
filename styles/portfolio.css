@@ -18,7 +18,7 @@ body, html {
 #nav-container {
     position: absolute;
     z-index: 20;
-    top: 1rem;
+    top: 1.2rem;
     background-color: #3C3C3C;
     width: 90vw;
     left: 50%;

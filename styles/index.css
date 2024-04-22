@@ -96,7 +96,7 @@ body, html {
 #nav-container {
     position: absolute;
     z-index: 25;
-    top: 1rem;
+    top: 1.2rem;
     background-color: #3C3C3C;
     width: 90vw;
     left: 50%;
@@ -165,7 +165,7 @@ body, html {
     position: absolute;
     z-index: 20;
     right: 1.6rem;
-    bottom: 1.4rem;
+    bottom: 1.2rem;
     width: auto;
     height: auto;
 }
@@ -179,6 +179,19 @@ body, html {
 #social > svg {
     height: auto;
     width: 2.6rem;
+}
+
+/* COPYRITGHT */
+
+#copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: .7rem;
+    z-index: 15;
+    font-family: 'Martian_Mono';
+    font-size: 11px;
+    color: #D664FF;
 }
 
 /* SLIDER */
@@ -220,11 +233,14 @@ body, html {
 }
 
 #slide-1 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 #intro-container {
@@ -254,10 +270,6 @@ body, html {
     border: 6px solid #ECB9B8;
     position: relative;
     z-index: 15;
-    top: 32%;
-    transform: translateY(-50%);
-    left: 50%;
-    transform: translateX(-50%);
     width: 635px;
     background-color: #3C3C3C;
 }
@@ -270,7 +282,7 @@ body, html {
     height: 32px;
     width: 100%;
     background-color: #ECB9B8;
-    color: #b4879c;
+    color: #F5E0E0;
     padding-bottom: 3px;
     font-family: 'Martian_Mono';
     font-size: .85rem;
@@ -284,7 +296,25 @@ body, html {
 #resize-box {
     height: 20px;
     width: 20px;
-    background-color: #f5cbca;
-    border: 1.5px solid #b4879c;
+    background-color: #F5E0E0;
     margin-left: 6px;
+}
+
+/* Description */
+
+#desc {
+    font-family: 'Martian_Mono';
+    color: whitesmoke;
+    width: 630px;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 15;
+}
+
+#line-2 {
+    color: #F5E0E0;
+}
+
+#line-3 {
+    color: #F5CBCA;
 }
