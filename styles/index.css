@@ -18,8 +18,8 @@ body, html {
 /* MEDIA QUERY REQUIRED FOR TOO WIDE / IMAGES */
 
 .cubeLeft {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
     background-color: #B191FF;
     display: inline-block;
     z-index: 5;
@@ -36,8 +36,8 @@ body, html {
 }
 
 .cubeLeft2 {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
     background-color: #B191FF;
     display: inline-block;
     z-index: 5;
@@ -56,8 +56,8 @@ body, html {
 /* */
 
 .cubeRight {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
     background-color: #B191FF;
     display: inline-block;
     z-index: 5;
@@ -74,8 +74,8 @@ body, html {
 }
 
 .cubeRight2 {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
     background-color: #B191FF;
     display: inline-block;
     z-index: 5;
@@ -306,7 +306,7 @@ body, html {
     font-family: 'Martian_Mono';
     color: whitesmoke;
     width: 630px;
-    font-size: 1rem;
+    font-size: .95rem;
     text-align: center;
     z-index: 15;
 }

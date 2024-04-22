@@ -312,6 +312,12 @@ h2 > a:visited {
     color: #F8FAED;
 }
 
+h1, h2 > a:link {
+    color: #F8FAED;
+}
+
+
+
 h4 {
     margin-bottom: 8px;
 }
