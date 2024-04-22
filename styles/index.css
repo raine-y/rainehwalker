@@ -15,6 +15,8 @@ body, html {
 
 /* Cubes */
 
+/* MEDIA QUERY REQUIRED FOR TOO WIDE / IMAGES */
+
 .cubeLeft {
     height: 2.2rem;
     width: 2.2rem;
@@ -25,7 +27,7 @@ body, html {
 
 .cubeLeft-pen {
     position: absolute;
-    left: 200px;
+    left: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,7 +45,7 @@ body, html {
 
 .cubeLeft-pen-2 {
     position: absolute;
-    left: 200px;
+    left: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -63,7 +65,7 @@ body, html {
 
 .cubeRight-pen {
     position: absolute;
-    right: 200px;
+    right: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,7 +83,7 @@ body, html {
 
 .cubeRight-pen-2 {
     position: absolute;
-    right: 200px;
+    right: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -222,6 +224,7 @@ body, html {
     width: 100%;
     position: absolute;
     display: flex;
+    flex-direction: column;
 }
 
 #intro-container {
@@ -269,6 +272,8 @@ body, html {
     background-color: #ECB9B8;
     color: #b4879c;
     padding-bottom: 3px;
+    font-family: 'Martian_Mono';
+    font-size: .85rem;
 }
 
 #resize {
