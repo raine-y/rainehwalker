@@ -17,6 +17,7 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #B99DFF;
+    overflow: hidden;
 }
 
 /* NAV */
@@ -321,4 +322,39 @@ img {
 .top {
   margin-top: auto;
   margin-bottom: .75rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 680px) {
+  .nav-link > a:link,
+  a:active,
+  a:visited {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 532px) {
+  .nav-link > a:link,
+  a:active,
+  a:visited {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 435px) {
+  .nav-link > a:link,
+a:active,
+a:visited {
+  font-size: .9rem;
+}
+
+}
+
+@media screen and (max-width: 435px) {
+  .nav-link > a:link,
+a:active,
+a:visited {
+  font-size: .9rem;
+}
+
 }
