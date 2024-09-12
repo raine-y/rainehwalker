@@ -56,11 +56,11 @@ body, html {
     border-top: 5px solid #707070;
   }
 
-  #about {
+  #resume {
     border-top: 5px solid #ECB9B8;
   }
 
-  #tess:before, #portfolio:before, #about:before, #resume:before {
+  #tess:before, #portfolio:before, #about:before {
     content: "";
     position: absolute;
     top: 0;
@@ -74,11 +74,11 @@ body, html {
     transition: transform 0.2s ease-out;
   }
 
-  #tess:hover:before, #about:hover:before, #portfolio:hover:before, #resume:hover:before {
+  #tess:hover:before, #about:hover:before, #portfolio:hover:before {
     transform: scaleY(1);
   }
 
-  #tess:hover, #portfolio:hover, #about:hover, #resume:hover {
+  #tess:hover, #portfolio:hover, #about:hover {
     border-top: 5px solid #ECB9B8;
   }
 
@@ -159,19 +159,34 @@ body, html {
 
 #about-header {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-#about-header > h1 {
+#about-header > h1, a > h1 {
   color: #eee0f5;
   font-family: 'VT323';
   font-size: 3rem;
   margin: 0;
   padding-top: 2px;
   padding-bottom: 6px;
-  padding-left: 12px;
 }
+
+#about-header > h1 {
+    padding-left: 12px;
+}
+
+#about-header > a {
+    padding-right: 12px;
+    text-decoration: none;
+    animation: blinker 1.1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: .7;
+    }
+  }
 
 #break {
   width: calc(100% - 24px);
@@ -199,16 +214,18 @@ body, html {
   overflow: hidden;
 }
 
-#about-block {
+#resume-block {
+  margin-top: 15px;
+  padding-left: 32px;
+  padding-right: 32px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   height: 100%;
-  width: 100%;
+  width: auto;
 }
 
-#about-block > p {
-  margin-top: 40px;
+#resume-block > p {
   width: 80%;
   margin-left: auto;
   margin-right: auto;

@@ -124,7 +124,7 @@ body, html {
     font-size: 2.4rem;
 }
 
-#tess, #portfolio, #about {
+#tess, #portfolio, #about, #resume {
     padding: 10px;
     display: inline-block;
     transform: perspective(1px) translateZ(0);
@@ -137,7 +137,7 @@ body, html {
     border-top: 5px solid #ECB9B8;
   }
 
-  #tess:before, #portfolio:before, #about:before {
+  #tess:before, #portfolio:before, #about:before, #resume:before {
     content: "";
     position: absolute;
     top: 0;
@@ -151,11 +151,11 @@ body, html {
     transition: transform 0.2s ease-out;
   }
 
-  #tess:hover:before, #about:hover:before, #portfolio:hover:before {
+  #tess:hover:before, #about:hover:before, #portfolio:hover:before, #resume:hover:before {
     transform: scaleY(1);
   }
 
-  #tess:hover, #portfolio:hover, #about:hover {
+  #tess:hover, #portfolio:hover, #about:hover, #resume:hover {
     border-top: 5px solid #ECB9B8;
   }
 
@@ -270,7 +270,7 @@ body, html {
     border: 6px solid #ECB9B8;
     position: relative;
     z-index: 15;
-    width: 605px;
+    width: 560px;
     background-color: #3C3C3C;
 }
 

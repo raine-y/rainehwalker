@@ -52,7 +52,7 @@ body, html {
     font-size: 2.4rem;
 }
 
-#tess, #portfolio, #about {
+#tess, #portfolio, #about, #resume {
     padding: 10px;
     display: inline-block;
     transform: perspective(1px) translateZ(0);
@@ -65,7 +65,7 @@ body, html {
     border-top: 5px solid #ECB9B8; 
   }
 
-  #tess:before, #portfolio:before, #about:before {
+  #tess:before, #portfolio:before, #about:before, #resume:before {
     content: "";
     position: absolute;
     top: 0;
@@ -79,11 +79,11 @@ body, html {
     transition: transform 0.2s ease-out;
   }
 
-  #tess:hover:before, #about:hover:before, #portfolio:hover:before {
+  #tess:hover:before, #about:hover:before, #portfolio:hover:before, #resume:hover:before {
     transform: scaleY(1);
   }
 
-  #tess:hover, #portfolio:hover, #about:hover {
+  #tess:hover, #portfolio:hover, #about:hover, #resume:hover {
     border-top: 5px solid #ECB9B8;
   }
 
@@ -174,7 +174,7 @@ body, html {
   margin-left: 6px;
 }
 
-#projects-container {
+#projects-container, #resume-container {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -194,7 +194,7 @@ body, html {
   justify-content: start;
 }
 
-#projects-header > h1 {
+#projects-header > h1, #resume-header > h1 {
   color: #eee0f5;
   font-family: 'VT323';
   font-size: 3rem;
@@ -208,6 +208,13 @@ body, html {
   width: calc(100% - 24px);
   height: 2px;
   border-top: dashed 4px #eee0f5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#resume-pdf {
+  width: 80%;
+  height: 900px;
   margin-left: auto;
   margin-right: auto;
 }
